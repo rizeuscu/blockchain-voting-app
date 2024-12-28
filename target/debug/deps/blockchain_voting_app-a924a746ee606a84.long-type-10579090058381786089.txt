@@ -1,0 +1,1 @@
+multiversx_sc::imports::MapMapper<<C as multiversx_sc::contract_base::ContractBase>::Api, multiversx_sc::types::String, multiversx_sc::types::BigUint<<C as multiversx_sc::contract_base::ContractBase>::Api>>

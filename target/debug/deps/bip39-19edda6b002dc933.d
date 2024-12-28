@@ -1,0 +1,9 @@
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/libbip39-19edda6b002dc933.rmeta: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/internal_macros.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/mod.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/english.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/pbkdf2.rs
+
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/bip39-19edda6b002dc933.d: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/internal_macros.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/mod.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/english.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/pbkdf2.rs
+
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/lib.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/internal_macros.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/mod.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/language/english.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bip39-2.1.0/src/pbkdf2.rs:

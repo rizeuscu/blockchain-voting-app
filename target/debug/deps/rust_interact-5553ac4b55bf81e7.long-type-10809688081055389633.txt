@@ -1,0 +1,1 @@
+fn(multiversx_sc_snippets::imports::InsertPassword) -> multiversx_sc_snippets::imports::InsertPassword {<multiversx_sc_snippets::imports::InsertPassword as From<multiversx_sc_snippets::imports::InsertPassword>>::from}

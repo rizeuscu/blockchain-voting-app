@@ -1,0 +1,1 @@
+multiversx_sc::imports::MapMapper<<C as multiversx_sc::contract_base::ContractBase>::Api, ManagedBuffer<<C as multiversx_sc::contract_base::ContractBase>::Api>, u64>

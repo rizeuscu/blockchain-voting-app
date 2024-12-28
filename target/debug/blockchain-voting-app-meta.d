@@ -1,0 +1,1 @@
+/Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/target/debug/blockchain-voting-app-meta: /Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/meta/src/main.rs /Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/src/blockchain_voting_app.rs

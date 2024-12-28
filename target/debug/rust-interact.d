@@ -1,0 +1,1 @@
+/Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/target/debug/rust-interact: /Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/interactor/src/interactor_main.rs /Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/interactor/src/proxy.rs /Users/bogdan/Documents/Master\ 2024/BPDA/blockchain-voting-app/src/blockchain_voting_app.rs

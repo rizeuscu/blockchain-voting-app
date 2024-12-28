@@ -1,0 +1,11 @@
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/libwriteable-ef5b378a4e12b744.rmeta: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/cmp.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/impls.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/ops.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/parts_write_adapter.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/testing.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/try_writeable.rs
+
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/writeable-ef5b378a4e12b744.d: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/cmp.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/impls.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/ops.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/parts_write_adapter.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/testing.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/try_writeable.rs
+
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/lib.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/cmp.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/impls.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/ops.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/parts_write_adapter.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/testing.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/writeable-0.5.5/src/try_writeable.rs:

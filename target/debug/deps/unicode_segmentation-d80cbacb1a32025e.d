@@ -1,0 +1,9 @@
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/libunicode_segmentation-d80cbacb1a32025e.rmeta: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/grapheme.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/sentence.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/word.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/tables.rs
+
+/Users/bogdan/Documents/Master 2024/BPDA/blockchain-voting-app/target/debug/deps/unicode_segmentation-d80cbacb1a32025e.d: /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/lib.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/grapheme.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/sentence.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/word.rs /Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/tables.rs
+
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/lib.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/grapheme.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/sentence.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/word.rs:
+/Users/bogdan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicode-segmentation-1.12.0/src/tables.rs:

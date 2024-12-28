@@ -1,0 +1,1 @@
+multiversx_sc::imports::MapMapper<<Self as multiversx_sc::contract_base::ProxyObjBase>::Api, multiversx_sc::types::String, multiversx_sc::types::BigUint<<Self as multiversx_sc::contract_base::ProxyObjBase>::Api>>

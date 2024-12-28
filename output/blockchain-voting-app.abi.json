@@ -1,0 +1,192 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.81.0",
+            "commitHash": "eeb90cda1969383f56a2637cbd3037bdf598841c",
+            "commitDate": "2024-09-04",
+            "channel": "Stable",
+            "short": "rustc 1.81.0 (eeb90cda1 2024-09-04)"
+        },
+        "contractCrate": {
+            "name": "blockchain-voting-app",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.53.2"
+        }
+    },
+    "name": "BlockchainVotingApp",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "upgradeConstructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "addAllowedVoter",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "election_code",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "allowed_voter",
+                    "type": "Address"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "createElection",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "name",
+                    "type": "bytes"
+                },
+                {
+                    "name": "candidates",
+                    "type": "List<bytes>"
+                },
+                {
+                    "name": "start",
+                    "type": "u64"
+                },
+                {
+                    "name": "end",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "vote",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "election_code",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "voted_candidate",
+                    "type": "bytes"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getElectionResults",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "election_code",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "List<VoteMetadata>"
+                }
+            ]
+        },
+        {
+            "name": "getElectionsMetadata",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<BigUint,ElectionMetadata>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "getVotes",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<BigUint,List<VoteMetadata>>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "allowedVoters",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<BigUint,List<Address>>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "votersVoted",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<BigUint,List<Address>>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "code",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "BigUint"
+                }
+            ]
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {
+        "ElectionMetadata": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "bytes"
+                },
+                {
+                    "name": "candidates",
+                    "type": "List<bytes>"
+                },
+                {
+                    "name": "start",
+                    "type": "u64"
+                },
+                {
+                    "name": "end",
+                    "type": "u64"
+                }
+            ]
+        },
+        "VoteMetadata": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "candidate",
+                    "type": "bytes"
+                },
+                {
+                    "name": "vote_count",
+                    "type": "BigUint"
+                }
+            ]
+        }
+    }
+}

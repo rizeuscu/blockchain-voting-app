@@ -1,0 +1,1 @@
+multiversx_sc::imports::MapMapper<UncallableApi, ManagedBuffer<UncallableApi>, multiversx_sc::imports::MapMapper<UncallableApi, ManagedBuffer<UncallableApi>, int16x4_t>>
