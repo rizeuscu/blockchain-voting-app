@@ -43,7 +43,7 @@ export const Dashboard = () => {
           <Widget key={element.title} {...element} />
         ))}
         <Card
-          title='Elections Data'
+          title='Elections Data and Results'
           description='All important details about past and current elections'
           reference='https://api.elrond.com/#/query'>
           <ContractQuery functionName='getElectionsMetadata' />
