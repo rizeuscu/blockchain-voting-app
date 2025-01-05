@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# @multiversx/template-dapp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **MultiversX dApp Template**, built using [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/).
+It's a basic implementation of [@multiversx/sdk-dapp](https://www.npmjs.com/package/@multiversx/sdk-dapp), providing the basics for MultiversX authentication and TX signing.
 
-Currently, two official plugins are available:
+See [Dapp template](https://template-dapp.multiversx.com/) for live demo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
 
-## Expanding the ESLint configuration
+- Node.js version 16.20.0+
+- Npm version 8.19.4+
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+The dapp is a client side only project and is built using the [Create React App](https://create-react-app.dev) scripts.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Instalation and running
+
+### Step 1. Install modules
+
+From a terminal, navigate to the project folder and run:
+
+```bash
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Step 2. Running in development mode
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+In the project folder run:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn start:devnet
+yarn start:testnet
+yarn start:mainnet
 ```
+
+This will start the React app in development mode, using the configs found in the `vite.config.ts` file.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+> **Note:** 
+While in development, to test the passkeys provider use the following command:
+`open -a Google\ Chrome --args --ignore-certificate-errors --ignore-urlfetcher-cert-requests`
+Make sure to close all instances of Chrome after the development session.
+
+### Step 3. Build for testing and production use
+
+A build of the app is necessary to deploy for testing purposes or for production use.
+To build the project run:
+
+```bash
+yarn build:devnet
+yarn build:testnet
+yarn build:mainnet
+```
+
+## Roadmap
+
+See the [open issues](https://github.com/multiversx/mx-template-dapp/issues) for a list of proposed features (and known issues).
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+One can contribute by creating _pull requests_, or by opening _issues_ for discovered bugs or desired features.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
