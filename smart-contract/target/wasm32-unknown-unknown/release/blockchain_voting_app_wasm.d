@@ -1,0 +1,1 @@
+/Users/bogdan/blockchain-voting-app/smart-contract/target/wasm32-unknown-unknown/release/blockchain_voting_app_wasm.wasm: /Users/bogdan/blockchain-voting-app/smart-contract/src/blockchain_voting_app.rs /Users/bogdan/blockchain-voting-app/smart-contract/wasm/src/lib.rs

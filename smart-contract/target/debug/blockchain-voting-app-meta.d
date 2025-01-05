@@ -1,0 +1,1 @@
+/Users/bogdan/blockchain-voting-app/smart-contract/target/debug/blockchain-voting-app-meta: /Users/bogdan/blockchain-voting-app/smart-contract/meta/src/main.rs /Users/bogdan/blockchain-voting-app/smart-contract/src/blockchain_voting_app.rs

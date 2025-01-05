@@ -1,0 +1,1 @@
+/Users/bogdan/blockchain-voting-app/smart-contract/target/debug/rust-interact: /Users/bogdan/blockchain-voting-app/smart-contract/interactor/src/interactor_main.rs /Users/bogdan/blockchain-voting-app/smart-contract/interactor/src/proxy.rs /Users/bogdan/blockchain-voting-app/smart-contract/src/blockchain_voting_app.rs
