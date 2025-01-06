@@ -17,9 +17,8 @@ export const Home = () => {
                     target='_blank'
                     className='text-gray-400 underline decoration-dotted hover:decoration-solid'
                   >
-                    sdk-dapp
+                    decentralized voting solution for elections
                   </a>{' '}
-                  starter project for any dApp{' '}
                   <br className='hidden xl:block' />
                   built on the{' '}
                   <a

@@ -53,7 +53,6 @@ const parseElectionMetadata = (base64Data: string, votingBase64Data: string) => 
 
     votes.push({ candidate, vote_count });
   }
-  console.log(votes);
 
   return {
     name,
