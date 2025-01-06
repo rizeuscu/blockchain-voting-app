@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { querySmartContract } from "./querySmartContract";
 import { sendTransactions } from "helpers";
 import { contractAddress } from "config";
-import { useGetAccountInfo } from "hooks";
 
 interface ContractQueryProps {
   functionName: string;

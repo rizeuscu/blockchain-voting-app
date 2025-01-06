@@ -41,11 +41,11 @@ pub trait BlockchainVotingApp {
         self.allowed_voters().insert(election_code.clone(), voters);
     }
 
-    // #[endpoint(removeAllowedVoter)]
-    // #[only_owner]
-    // fn remove_allowed_voter(&self, election_code: BigUint, allowed_voter: ManagedAddress) {
-
-    // }
+    #[endpoint(removeAllowedVoter)]
+    #[only_owner]
+    fn remove_allowed_voter(&self, election_code: BigUint, allowed_voter: ManagedAddress) {
+        
+    }
 
     #[endpoint(createElection)]
     #[only_owner]

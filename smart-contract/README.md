@@ -1,1 +1,0 @@
-# blockchain-voting-app
