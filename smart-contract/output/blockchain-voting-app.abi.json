@@ -43,6 +43,22 @@
             "outputs": []
         },
         {
+            "name": "removeAllowedVoter",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "election_code",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "allowed_voter",
+                    "type": "Address"
+                }
+            ],
+            "outputs": []
+        },
+        {
             "name": "createElection",
             "onlyOwner": true,
             "mutability": "mutable",

@@ -27,6 +27,7 @@ async fn main() {
         "deploy" => interact.deploy().await,
         "upgrade" => interact.upgrade().await,
         "addAllowedVoter" => interact.add_allowed_voter().await,
+        "removeAllowedVoter" => interact.remove_allowed_voter().await,
         "createElection" => interact.create_election().await,
         "vote" => interact.vote().await,
         "getElectionResults" => interact.get_election_results().await,
@@ -131,7 +132,7 @@ impl ContractInteract {
             .tx()
             .to(self.state.current_address())
             .from(&self.wallet_address)
-            .gas(30_000_000u64)
+            .gas(50_000_000u64)
             .typed(proxy::BlockchainVotingAppProxy)
             .upgrade()
             .code(&self.contract_code)
@@ -156,6 +157,26 @@ impl ContractInteract {
             .gas(30_000_000u64)
             .typed(proxy::BlockchainVotingAppProxy)
             .add_allowed_voter(election_code, allowed_voter)
+            .returns(ReturnsResultUnmanaged)
+            .prepare_async()
+            .run()
+            .await;
+
+        println!("Result: {response:?}");
+    }
+
+    async fn remove_allowed_voter(&mut self) {
+        let election_code = BigUint::<StaticApi>::from(0u128);
+        let allowed_voter = bech32::decode("");
+
+        let response = self
+            .interactor
+            .tx()
+            .from(&self.wallet_address)
+            .to(self.state.current_address())
+            .gas(30_000_000u64)
+            .typed(proxy::BlockchainVotingAppProxy)
+            .remove_allowed_voter(election_code, allowed_voter)
             .returns(ReturnsResultUnmanaged)
             .prepare_async()
             .run()

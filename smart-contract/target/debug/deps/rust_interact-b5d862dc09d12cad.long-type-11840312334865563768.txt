@@ -1,0 +1,1 @@
+multiversx_sc::types::Tx<InteractorEnvExec<'_>, &multiversx_sc::types::Address, &multiversx_sc_snippets::imports::Bech32Address, multiversx_sc::types::NotPayable, ExplicitGas<u64>, UpgradeCall<InteractorEnvExec<'_>, Code<&multiversx_sc_snippets::imports::BytesValue>>, ConsRet<InteractorEnvExec<'_>, &str, OriginalResultMarker<()>>>

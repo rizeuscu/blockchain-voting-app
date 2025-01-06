@@ -97,6 +97,22 @@ where
             .original_result()
     }
 
+    pub fn remove_allowed_voter<
+        Arg0: ProxyArg<BigUint<Env::Api>>,
+        Arg1: ProxyArg<ManagedAddress<Env::Api>>,
+    >(
+        self,
+        election_code: Arg0,
+        allowed_voter: Arg1,
+    ) -> TxTypedCall<Env, From, To, NotPayable, Gas, ()> {
+        self.wrapped_tx
+            .payment(NotPayable)
+            .raw_call("removeAllowedVoter")
+            .argument(&election_code)
+            .argument(&allowed_voter)
+            .original_result()
+    }
+
     pub fn create_election<
         Arg0: ProxyArg<ManagedBuffer<Env::Api>>,
         Arg1: ProxyArg<ManagedVec<Env::Api, ManagedBuffer<Env::Api>>>,

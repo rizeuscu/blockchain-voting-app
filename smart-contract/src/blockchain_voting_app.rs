@@ -44,7 +44,19 @@ pub trait BlockchainVotingApp {
     #[endpoint(removeAllowedVoter)]
     #[only_owner]
     fn remove_allowed_voter(&self, election_code: BigUint, allowed_voter: ManagedAddress) {
-        
+        // check if election exists
+        let elections_metadata = self.elections_metadata();
+        require!(elections_metadata.contains_key(&election_code.clone()), "Election code does not exist!");
+
+        // check if the allowed voter is in the list of currently allowed voters for the selected election
+        let mut voters = self.allowed_voters().get(&election_code.clone()).unwrap_or_default();
+        require!(voters.contains(&allowed_voter), "Voter is not allowed for this election!");
+
+        // remove allowed voter from currently allowed voters for selected election
+        if let Some(voter_index) = voters.iter().position(|voter| *voter == allowed_voter) {
+            voters.remove(voter_index);
+            self.allowed_voters().insert(election_code.clone(), voters);
+        }
     }
 
     #[endpoint(createElection)]
