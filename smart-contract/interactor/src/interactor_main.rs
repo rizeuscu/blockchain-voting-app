@@ -32,10 +32,6 @@ async fn main() {
         "vote" => interact.vote().await,
         "getElectionResults" => interact.get_election_results().await,
         "getElectionsMetadata" => interact.elections_metadata().await,
-        "getVotes" => interact.votes().await,
-        "allowedVoters" => interact.allowed_voters().await,
-        "votersVoted" => interact.voters_voted().await,
-        "code" => interact.code().await,
         _ => panic!("unknown command: {}", &cmd),
     }
 }
@@ -132,7 +128,7 @@ impl ContractInteract {
             .tx()
             .to(self.state.current_address())
             .from(&self.wallet_address)
-            .gas(50_000_000u64)
+            .gas(30_000_000u64)
             .typed(proxy::BlockchainVotingAppProxy)
             .upgrade()
             .code(&self.contract_code)
@@ -251,66 +247,6 @@ impl ContractInteract {
             .to(self.state.current_address())
             .typed(proxy::BlockchainVotingAppProxy)
             .elections_metadata()
-            .returns(ReturnsResultUnmanaged)
-            .prepare_async()
-            .run()
-            .await;
-
-        println!("Result: {result_value:?}");
-    }
-
-    async fn votes(&mut self) {
-        let result_value = self
-            .interactor
-            .query()
-            .to(self.state.current_address())
-            .typed(proxy::BlockchainVotingAppProxy)
-            .votes()
-            .returns(ReturnsResultUnmanaged)
-            .prepare_async()
-            .run()
-            .await;
-
-        println!("Result: {result_value:?}");
-    }
-
-    async fn allowed_voters(&mut self) {
-        let result_value = self
-            .interactor
-            .query()
-            .to(self.state.current_address())
-            .typed(proxy::BlockchainVotingAppProxy)
-            .allowed_voters()
-            .returns(ReturnsResultUnmanaged)
-            .prepare_async()
-            .run()
-            .await;
-
-        println!("Result: {result_value:?}");
-    }
-
-    async fn voters_voted(&mut self) {
-        let result_value = self
-            .interactor
-            .query()
-            .to(self.state.current_address())
-            .typed(proxy::BlockchainVotingAppProxy)
-            .voters_voted()
-            .returns(ReturnsResultUnmanaged)
-            .prepare_async()
-            .run()
-            .await;
-
-        println!("Result: {result_value:?}");
-    }
-
-    async fn code(&mut self) {
-        let result_value = self
-            .interactor
-            .query()
-            .to(self.state.current_address())
-            .typed(proxy::BlockchainVotingAppProxy)
-            .code()
             .returns(ReturnsResultUnmanaged)
             .prepare_async()
             .run()

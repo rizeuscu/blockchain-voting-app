@@ -2,8 +2,8 @@ import { SmartContract, Query, Address, ContractFunction, BigUIntValue } from "@
 import { ApiNetworkProvider } from "@multiversx/sdk-network-providers";
 import { contractAddress } from "config";
 
-const parseElectionMetadata = (base64Data: string, votingBase64Data: string) => {
-  const buffer = Buffer.from(base64Data, "base64");
+const parseElectionMetadata = (data: string, votingData: string) => {
+  const buffer = Buffer.from(data, "base64");
   let offset = 0;
 
   const nameLength = buffer.readUInt32BE(offset);
@@ -29,7 +29,7 @@ const parseElectionMetadata = (base64Data: string, votingBase64Data: string) => 
 
   const end = buffer.readBigUInt64BE(offset);
 
-  const votesBuffer = Buffer.from(votingBase64Data, "base64");
+  const votesBuffer = Buffer.from(votingData, "base64");
   let voteOffset = 0;
 
   const votes = [];
@@ -73,21 +73,27 @@ export const querySmartContract = async (functionName: string) => {
     });
 
     const queryResponse = await provider.queryContract(query);
-    const base64Data = queryResponse.returnData.slice(1); // Skip the first element
-    
+    const data = queryResponse.returnData;
     let electionsMetadata: any[] = [];
-    const dataPromises = base64Data.map(async (data, index) => {
+
+    for (let i = 0; i < data.length; i += 2) {
+      let index;
+      if (data[i] == "") {
+        index = BigInt(0);
+      } else {
+        index = BigInt('0x' + Buffer.from(data[i], 'base64').toString('hex'));
+      }
+      console.log(index);
+      const electionMetadata = data[i + 1];
+
       const votingQuery = new Query({
         address: contract.getAddress(),
         func: new ContractFunction("getElectionResults"),
-        args: [new BigUIntValue(BigInt(index))]
+        args: [new BigUIntValue(index)],
       });
-  
       const votingQueryResponse = await provider.queryContract(votingQuery);
-  
-      return parseElectionMetadata(data, votingQueryResponse.returnData[0]);
-    });
-    electionsMetadata = await Promise.all(dataPromises);
+      electionsMetadata.push(parseElectionMetadata(electionMetadata, votingQueryResponse.returnData[0]));
+    }
 
     return electionsMetadata;
   } catch (error) {

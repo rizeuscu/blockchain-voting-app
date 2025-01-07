@@ -172,42 +172,6 @@ where
             .raw_call("getElectionsMetadata")
             .original_result()
     }
-
-    pub fn votes(
-        self,
-    ) -> TxTypedCall<Env, From, To, NotPayable, Gas, MultiValueEncoded<Env::Api, MultiValue2<BigUint<Env::Api>, ManagedVec<Env::Api, VoteMetadata<Env::Api>>>>> {
-        self.wrapped_tx
-            .payment(NotPayable)
-            .raw_call("getVotes")
-            .original_result()
-    }
-
-    pub fn allowed_voters(
-        self,
-    ) -> TxTypedCall<Env, From, To, NotPayable, Gas, MultiValueEncoded<Env::Api, MultiValue2<BigUint<Env::Api>, ManagedVec<Env::Api, ManagedAddress<Env::Api>>>>> {
-        self.wrapped_tx
-            .payment(NotPayable)
-            .raw_call("allowedVoters")
-            .original_result()
-    }
-
-    pub fn voters_voted(
-        self,
-    ) -> TxTypedCall<Env, From, To, NotPayable, Gas, MultiValueEncoded<Env::Api, MultiValue2<BigUint<Env::Api>, ManagedVec<Env::Api, ManagedAddress<Env::Api>>>>> {
-        self.wrapped_tx
-            .payment(NotPayable)
-            .raw_call("votersVoted")
-            .original_result()
-    }
-
-    pub fn code(
-        self,
-    ) -> TxTypedCall<Env, From, To, NotPayable, Gas, BigUint<Env::Api>> {
-        self.wrapped_tx
-            .payment(NotPayable)
-            .raw_call("code")
-            .original_result()
-    }
 }
 
 #[type_abi]

@@ -122,49 +122,6 @@
                     "multi_result": true
                 }
             ]
-        },
-        {
-            "name": "getVotes",
-            "mutability": "readonly",
-            "inputs": [],
-            "outputs": [
-                {
-                    "type": "variadic<multi<BigUint,List<VoteMetadata>>>",
-                    "multi_result": true
-                }
-            ]
-        },
-        {
-            "name": "allowedVoters",
-            "mutability": "readonly",
-            "inputs": [],
-            "outputs": [
-                {
-                    "type": "variadic<multi<BigUint,List<Address>>>",
-                    "multi_result": true
-                }
-            ]
-        },
-        {
-            "name": "votersVoted",
-            "mutability": "readonly",
-            "inputs": [],
-            "outputs": [
-                {
-                    "type": "variadic<multi<BigUint,List<Address>>>",
-                    "multi_result": true
-                }
-            ]
-        },
-        {
-            "name": "code",
-            "mutability": "readonly",
-            "inputs": [],
-            "outputs": [
-                {
-                    "type": "BigUint"
-                }
-            ]
         }
     ],
     "esdtAttributes": [],

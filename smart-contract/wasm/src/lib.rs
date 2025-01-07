@@ -6,9 +6,9 @@
 
 // Init:                                 1
 // Upgrade:                              1
-// Endpoints:                           10
+// Endpoints:                            6
 // Async Callback (empty):               1
-// Total number of exported functions:  13
+// Total number of exported functions:   9
 
 #![no_std]
 
@@ -26,10 +26,6 @@ multiversx_sc_wasm_adapter::endpoints! {
         vote => vote
         getElectionResults => get_election_results
         getElectionsMetadata => elections_metadata
-        getVotes => votes
-        allowedVoters => allowed_voters
-        votersVoted => voters_voted
-        code => code
     )
 }
 

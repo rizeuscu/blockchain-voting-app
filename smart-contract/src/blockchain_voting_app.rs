@@ -156,19 +156,15 @@ pub trait BlockchainVotingApp {
     #[storage_mapper("elections_metadata")]
     fn elections_metadata(&self) -> MapMapper<BigUint, ElectionMetadata<Self::Api>>;
 
-    #[view(getVotes)]
     #[storage_mapper("votes")]
     fn votes(&self) -> MapMapper<BigUint, ManagedVec<VoteMetadata<Self::Api>>>;
 
-    #[view(allowedVoters)]
     #[storage_mapper("allowed_voters")]
     fn allowed_voters(&self) -> MapMapper<BigUint, ManagedVec<ManagedAddress>>;
 
-    #[view(votersVoted)]
     #[storage_mapper("voters_voted")]
     fn voters_voted(&self) -> MapMapper<BigUint, ManagedVec<ManagedAddress>>;
 
-    #[view(code)]
     #[storage_mapper("code")]
     fn code(&self) -> SingleValueMapper<BigUint>;
 }
