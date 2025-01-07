@@ -26,7 +26,7 @@ Moreover, the contract was deployed using a test wallet (alice). More test walle
 #### createElection (only_owner)
 - creates a new election process containing a name, start and end times and the candidates/options to choose from
 - increments a code which represents the number of the election process since deployment of smart contract (starts from 0)
-- it is availalbe for the owner of the smart contract only
+- it is available for the owner of the smart contract only
 
 #### addAllowedVoter (only_owner)
 - allows adding a wallet address as a valid voter for a certain election number (based on the code that gets incremented when calling createElection)
